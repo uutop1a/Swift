@@ -1,0 +1,20 @@
+func timeOfDay(for hour: Int) -> String {
+    switch hour {
+        case 0..<6:
+        return "Ночь"
+        
+        case 6..<12:
+        return "Утро"
+        
+        case 12..<18:
+        return "День"
+        
+        case 18...23:
+        return "Вечер"
+        
+        default:
+        return "Введите число с циферблата"
+    }
+}
+var hour = 7
+print(timeOfDay(for: hour))
