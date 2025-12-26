@@ -1,0 +1,18 @@
+func firstDivisior(of number: Int) -> Int? {
+    var divisor = 2
+    var result: Int? = nil
+    while true {
+        if divisor >= number {
+            break
+        }
+        if number % divisor == 0 {
+            result = divisor
+            break
+        }
+        divisor += 1
+    }
+    return result
+}
+let number = 9
+let result = firstDivisior(of: number)
+print(result)
