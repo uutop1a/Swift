@@ -1,0 +1,18 @@
+func analyzeNumbers(_ numbers: [Int]) -> (min: Int, max: Int, average: Double) {
+    var minValue = numbers[0]
+    var maxValue = numbers[0]
+    var sum = 0
+    for number in numbers {
+        if number < minValue {
+            minValue = number
+        }
+        if number > maxValue {
+            maxValue = number
+        }
+        sum += number
+    }
+    let average = Double(sum) / Double(numbers.count)
+    return(minValue, maxValue, average)
+}
+let result = analyzeNumbers([2, 3, 12, 433, -12, 0, 42, 14])
+print(result)
