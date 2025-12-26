@@ -1,0 +1,17 @@
+func isEven1(_ number: Int) -> Bool {
+    let even = number % 2 == 0 ? true : false
+    return even
+}
+
+let result1 = isEven1(56)
+print(result1)
+
+__________________________________________________________
+
+
+func isEven2(_ number: Int) -> Bool {
+    return number.isMultiple(of: 2)
+}
+
+let result2 = isEven2(56)
+print(result2)
