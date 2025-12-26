@@ -1,0 +1,35 @@
+func printDays(for day: String) {
+    switch day {
+        case "Воскресенье":
+        print("Воскресенье")
+        fallthrough
+        
+        case "Понедельник":
+        print("Понедельник")
+        fallthrough
+        
+        case "Вторник":
+        print("Вторник")
+        fallthrough
+        
+        case "Среда":
+        print("Среда")
+        fallthrough
+        
+        case "Четверг":
+        print("Четверг")
+        fallthrough
+        
+        case "Пятница":
+        print("Пятница")
+        fallthrough
+        
+        case "Суббота":
+        print("Суббота")
+        
+        default:
+        print("Это не день недели")
+    }
+}
+let day = "Понедельник"
+printDays(for: day)
