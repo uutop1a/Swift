@@ -1,0 +1,19 @@
+func analyzeGrades(_ grades: [Int]) -> (passed: Int, failed: Int, average: Double) {
+    var pass = 0
+    var fail = 0
+    var total = 0
+    for num in grades {
+        if num >= 40 {
+            pass += 1
+        }
+        else {
+            fail += 1
+        }
+        total += num
+    }
+    let average = Double(total) / Double(grades.count)
+    return(passed: pass, failed: fail, average: average)
+}
+
+let result = analyzeGrades([54, 23, 100, 39, 21, 40, 89, 11, 67, 70, 0])
+print(result)
