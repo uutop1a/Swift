@@ -1,0 +1,18 @@
+var guests: [String : String] = [
+"Анна": "Россия",
+"Марк": "Россия",
+"Элизабет": "Британия",
+"Лукас": "США",
+"Роза": "Италия",
+"Стив": "США"
+]
+
+func greetGuest(name: String) -> String {
+    if let country = guests[name] {
+        return "\(name) из \(country). Добро пожаловать!"
+    } else {
+        return "Гость не найден"
+    }
+}
+let name = "Анна"
+print(greetGuest(name: name))
