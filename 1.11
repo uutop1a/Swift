@@ -1,0 +1,20 @@
+func studentReport(name: String, grades: [Int]) -> String {
+    var pass = 0
+    var fail = 0
+    var total = 0
+    for num in grades {
+        if num >= 40 {
+            pass += 1
+        }
+        else {
+            fail += 1
+        }
+        total += num
+    }
+    let average = Double(total) / Double(grades.count)
+    return "Студент \(name): сдал - \(pass) предметов, не сдал - \(fail), средний балл - \(average)."
+}
+
+let name = "Степан"
+let student = studentReport(name: name, grades: [56, 13, 100, 67, 34, 83])
+print(student)
